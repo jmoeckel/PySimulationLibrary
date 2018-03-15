@@ -42,6 +42,10 @@ def __RegisterTools():
     # Dymola
     from PySimLib.Tools.Dymola import Dymola
     __RegisterTool(Dymola)
+    
+    # Dymola2
+    from PySimLib.Tools.Dymola2 import Dymola2
+    __RegisterTool(Dymola2)
 
     # OpenModelica
     from PySimLib.Tools.OpenModelica import OpenModelica
