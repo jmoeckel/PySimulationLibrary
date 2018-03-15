@@ -325,8 +325,9 @@ class Dymola(ModelicaTool):
         # this._DeleteFile("failure");
 
         if(failed):
+            from PySimLib.Exceptions.SimulationFailedException import SimulationFailedException
             this._DeleteFile("dsres.mat")
-            raise SimulationFailedException()
+            raise SimulationFailedException(sim, 'Dymola')
 
         this._DeleteFile(this.__GetSimInitFilePath(sim))
 
