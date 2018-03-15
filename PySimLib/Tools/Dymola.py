@@ -160,8 +160,8 @@ class Dymola(ModelicaTool):
             if(name not in sim.variables):
                 continue
 
-            if(sim.variables[name].start is None):
-                value = sim.vars[name].start
+            if(sim.variables[name].start is not None):
+                value = sim.variables[name].start
                 values.SetValue(1, i, value)
 
         # write output
