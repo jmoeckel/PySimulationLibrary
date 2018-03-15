@@ -27,6 +27,7 @@ class Solver:
         # Public members
         this.stepSize = 0
         this.tolerance = 1e-6
+        this.numberOfIntervals = 500
 
     # Magic methods
     def __str__(this):
