@@ -43,6 +43,7 @@ class Simulation:
         this.stopTime = mdl.stopTime
         this.solver = copy.deepcopy(mdl.solver)
         this.variables = copy.deepcopy(mdl.variables)
+        this.parameters = copy.deepcopy(mdl.parameters)
 
     # Magic methods
     def __str__(this):
