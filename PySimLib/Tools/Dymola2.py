@@ -286,7 +286,7 @@ class Dymola2(ModelicaTool):
         this.__WriteInit(sim)
 
         # simulate
-        if(GetBoolConfigValue("Dymola", "SimByExe")):
+        if(GetBoolConfigValue("Dymola2", "SimByExe")):
             from PySimLib import Log, Platform
 
             args = [this.__GetExeFilePath(mdl), this.__GetSimInitFilePath(sim)]
@@ -295,7 +295,7 @@ class Dymola2(ModelicaTool):
             from PySimLib import Log, Platform
             # convert back to dsin
             args = [
-                GetConfigValue("Dymola", "PathAlist"),
+                GetConfigValue("Dymola2", "PathAlist"),
                 "-a",
                 this.__GetSimInitFilePath(sim),
                 dsinPaths
